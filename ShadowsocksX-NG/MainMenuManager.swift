@@ -648,8 +648,8 @@ class MainMenuManager: NSObject, NSUserNotificationCenterDelegate {
         serversMenuItem.submenu?.minimumWidth = 0
     }
     
-    func setUpMenu(_ showSpeed:Bool){
-        if showSpeed{
+    func setUpMenu(_ showSpeed:Bool) {
+        if showSpeed {
             speedItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
             speedItem.menu = speedMenu
             if UserDefaults.standard.bool(forKey: USERDEFAULTS_FIXED_NETWORK_SPEED_VIEW_WIDTH) {
@@ -676,7 +676,7 @@ class MainMenuManager: NSObject, NSUserNotificationCenterDelegate {
                 }
                 RunLoop.main.add(speedTimer!, forMode: RunLoop.Mode.common)
             }
-        }else{
+        } else {
             speedItem.attributedTitle = NSAttributedString(string: "")
             NSStatusBar.system.removeStatusItem(speedItem)
             speedTimer?.invalidate()

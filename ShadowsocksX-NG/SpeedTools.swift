@@ -67,6 +67,6 @@ class SpeedTools {
     }
     
     static func speedAttributedString(up: Double, down: Double) -> NSAttributedString {
-        return NSAttributedString(string: "\n\(SpeedTools.formatRateData(Float(up))) ↑\n\(SpeedTools.formatRateData(Float(down))) ↓", attributes: SpeedTools.statusBarTextAttributes)
+        return NSAttributedString(string: "\(SpeedTools.formatRateData(Float(up))) ↑\n\(SpeedTools.formatRateData(Float(down))) ↓", attributes: SpeedTools.statusBarTextAttributes)
     }
 }
